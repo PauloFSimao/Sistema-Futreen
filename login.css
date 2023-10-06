@@ -78,13 +78,17 @@ input {
 button {
     background-color: var(--corDetalhes);
     border-style: none;
-    font-family: Inter-bold;
     width: 180px;
     height: 30px;
     border-radius: 20px;
-    color: var(--corBranco);
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+#entrar {
+    color: var(--corBranco);
+    text-decoration: none;
+    font-family: Inter-bold;
 }
 
 button:hover {
@@ -103,7 +107,7 @@ p {
     font-size: 12px;
 }
 
-a {
+#registre {
     text-decoration: none;
     color: var(--corDetalhes);
 }
