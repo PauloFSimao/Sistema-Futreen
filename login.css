@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+:root {
+    --corFundo: #E6FFE6;
+    --corDetalhes: #008000;
+    --corBranco: #FFFFFF;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Inter-bold;
+    src: url(fonts/Inter/static/Inter-Bold.ttf);
+}
+
+body {
+    background-color: var(--corFundo);
+    padding: 20px;
+}
+
+h1{
+    color: var(--corDetalhes);
+    font-family: Inter-bold;
+    text-align: center;
+    font-size: 30px;
+}
+
+main{
+    max-width: 500px;
+    background-color: var(--corBranco);
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px 10px 10px 30px;
+    border: 1px solid #008000;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+}
+
+#logo{
+    height: 150px;
+}
+
+.inputs{
+    display: block;
+    text-align: center;
+}
+
+input {
+    outline: none;
+    border-style: none;
+    box-shadow: -1.5px 1.5px 0px var(--corDetalhes);
+    margin-top: 20px;
+}
+
+#email {
+    padding: 5px;
+    width: 450px;
+}
+
+#senha {
+    padding: 5px;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--corDetalhes);
+    border-style: none;
+    font-family: Inter-bold;
+    width: 180px;
+    height: 30px;
+    border-radius: 20px;
+    color: var(--corBranco);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008000cc;
+    transition: 1s;
+}
+
+.registrar {
+    margin-bottom: 40px;
+}
+
+p {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Inter;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--corDetalhes);
+}
