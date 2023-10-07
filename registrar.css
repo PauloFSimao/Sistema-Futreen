@@ -30,7 +30,7 @@ h1{
 }
 
 main{
-    max-width: 500px;
+    max-width: 800px;
     background-color: var(--corBranco);
     margin: auto;
     border-radius: 20px;
@@ -99,7 +99,98 @@ button:hover {
     transition: 1s;
 }
 
-.registrar {
+.logo {
+    display: block;
+    text-align: center;
+}
+
+#logo{
+    height: 90px;
+}
+
+.inputs{
+    display: block;
+    text-align: center;
+}
+
+input {
+    outline: none;
+    border-style: none;
+    box-shadow: -1.5px 1.5px 0px var(--corDetalhes);
+    margin-top: 20px;
+}
+
+#nome {
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#dataNasc {
+    margin: 0px;
+}
+
+#usuario {
+    padding: 5px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#email {
+    padding: 5px;
+    width: 400px;
+}
+
+#senha {
+    padding: 5px;
+    width: 220px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#biografia {
+    text-align: left;
+    margin-left: 190px;
+}
+
+#bio {
+    width: 450px;
+    height: 50px;
+    margin-top: 0px;
+    border-radius: 0px 0px 0px 20px;
+}
+
+.botao {
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--corDetalhes);
+    border-style: none;
+    width: 180px;
+    height: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#cadastrar {
+    color: var(--corBranco);
+    text-decoration: none;
+    font-family: Inter-bold;
+    padding: 5px 50px 5px 50px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #008000cc;
+    transition: 1s;
+}
+
+.login {
     margin-bottom: 40px;
 }
 
@@ -110,7 +201,7 @@ p {
     font-size: 12px;
 }
 
-#registre {
+#login {
     text-decoration: none;
     color: var(--corDetalhes);
 }
