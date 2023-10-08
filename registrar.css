@@ -156,6 +156,7 @@ input {
 }
 
 #bio {
+    padding: 10px;
     width: 450px;
     height: 50px;
     margin-top: 0px;

@@ -60,10 +60,20 @@ header {
 
 }
 
+#nomeUsuario {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    margin: -45px -100px;
+    font-family: Inter;
+    font-size: 15px;
+    color: black;
+}
+
 .perfil {
     width: 100%;
     text-align: right;
-    margin: -70px -10px;
+    margin: -40px -10px;
 }
 
 #perfil {
