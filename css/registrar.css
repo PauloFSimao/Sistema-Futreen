@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root {
     --corFundo: #E6FFE6;
     --corDetalhes: #008000;
@@ -9,12 +10,34 @@
 
 @font-face {
     font-family: Inter;
-    src: url(fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 @font-face {
     font-family: Inter-bold;
-    src: url(fonts/Inter/static/Inter-Bold.ttf);
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
+}
+
+@keyframes notificar {
+    from{
+        opacity: 0;
+        translate: 10000px;
+    }
+    to{
+        opacity: 1;
+        translate: 0;
+    }
+}
+
+@keyframes sumir{
+    from{
+        opacity: 1;
+        translate: 0;
+    }
+    to{
+        opacity: 0;
+        translate: 1000px;
+    }
 }
 
 body {
@@ -178,17 +201,19 @@ button {
     cursor: pointer;
 }
 
-#cadastrar {
+button {
     color: var(--corBranco);
     text-decoration: none;
     font-family: Inter-bold;
     padding: 5px 50px 5px 50px;
     border-radius: 20px;
+    transition: 1s;
 }
 
 button:hover {
     background-color: #008000cc;
-    transition: 1s;
+    transform: scale(1.2);
+    box-shadow: 5px 5px 10px #999999;
 }
 
 .login {
@@ -205,4 +230,25 @@ p {
 #login {
     text-decoration: none;
     color: var(--corDetalhes);
+}
+
+#sucesso{
+    border: 2px solid green;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #FFFFFF;
+    display: none;
+    align-items: center;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px #999999;
+}
+#sucesso i{
+    color: #008000;
+    font-size: 30px;
+    margin-right: 5px;
 }

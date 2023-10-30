@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Inter-bold;
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
+}
+
+@keyframes notificar{
+    from{
+        opacity: 0;
+        display: none;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1;
+        display: block;
+        transform: translateY(0);
+    }
+}
+
+body{
+    background-color: #E6FFE6;
+    font-family: Inter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+main{
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+    border: solid 1px #008000;
+    max-width: 700px;
+    display: block;
+    text-align: center;
+}
+h1{
+    color: #008000;
+    font-family: Inter-bold;
+}
+#logo{
+    height: 100px;
+}
+input {
+    outline: none;
+    border-style: none;
+    box-shadow: -1.5px 1.5px 0px #008000;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px;
+    width: 400px;
+}
+textarea{
+    outline: none;
+    border-style: none;
+    box-shadow: -1.5px 1.5px 0px #008000;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px;
+    width: 400px;
+    font-family: Inter;
+}
+#btCriarForum{
+    margin-top: 30px;
+    background-color: #008000;
+    border: none;
+    font-family: Inter;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-family: Inter-bold;
+    transition: 1s;
+}
+#btCriarForum:hover{
+    background-color: #008000cc;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px #999;
+    cursor: pointer;
+}
+#sucesso{
+    border: 2px solid green;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    width: auto;
+    position: absolute;
+    background-color: #FFFFFF;
+    align-items: center;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px #999999;
+    display: none;
+}
+#sucesso i{
+    color: #008000;
+    font-size: 30px;
+    margin-right: 5px;
+}
+.obs{
+    font-size: 12px;
+}
+.ok{
+    background-color: #008000;
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.8s;
+}
+.ok:hover{
+    background-color: #008000cc;
+    box-shadow: 5px 5px 5px #999999;
+    transform: scale(1.2);
+}

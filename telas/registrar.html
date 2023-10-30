@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="registrar.css">
+    <link rel="stylesheet" href="../css/registrar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../img/Logo.png" />
     <title>Futreen</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
         <h1>Cadastrar Conta</h1>
         <br>
         <div class="logo">
-            <img id="logo" src="img/Logo.png" alt="logo">
+            <img id="logo" src="../img/Logo.png" alt="logo">
         </div>
         <div class="inputs">
             <input id="nome" type="name" name="Nome" placeholder="Nome Completo">
@@ -29,12 +31,19 @@
             <br>
         </div>
         <div class="botao">
-            <button type="button"><a id="cadastrar" href="foruns.html">Cadastrar</a></button>
+            <button type="button" id="cadastrar">Cadastrar</button>
         </div>
         <div class="login">
-            <p>Já tem uma conta? <a id="login" href="index.html">Faça login</a></p>
+            <p>Já tem uma conta? <a id="login" href="../index.html">Faça login</a></p>
         </div>
+
     </main>
+    <div id="sucesso">
+        <i class='bx bxs-check-circle'></i>
+        <span><b>Cadatro realizado com sucesso!</b></span>
+    </div>
+
+    <script type="text/javascript" src="../js/registrar.js"></script>
     
 </body>
 </html>

@@ -9,12 +9,12 @@
 
 @font-face {
     font-family: Inter;
-    src: url(fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 @font-face {
     font-family: Inter-bold;
-    src: url(fonts/Inter/static/Inter-Bold.ttf);
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
 }
 
 body{
@@ -119,6 +119,7 @@ main {
     text-align: justify;
     font-size: 15px;
     display: inline-block;
+    width: 100%;
     max-width: 98.4%;
     min-width: 200px;
     border: 1px solid var(--corTextos);
@@ -131,6 +132,7 @@ main {
     max-width: 92%;
     min-width: 200px;
     margin: 5px 0px 0px 90px;
+    height: 55.2px;
 }
 
 .forum > li {
@@ -159,7 +161,7 @@ main {
     font-family: Inter;
     position: absolute;
     margin-left: 2px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #participar {
@@ -170,4 +172,31 @@ main {
     border: none;
     font-family: Inter;
     padding: 4px;
+    transition: 0.5s;
+}
+#participar:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #999999;
+    background-color: #008000cc;
+}
+.topo{
+    text-align: center;
+}
+.formForum{
+    text-decoration: none;
+    color: white;
+    background-color: #008000;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+    font-family: Inter;
+    transition: 1s;
+}
+.formForum:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 5px 5px #999999;
+    background-color: #008000cc;
 }
