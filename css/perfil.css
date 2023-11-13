@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Inter-bold;
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
+}
+@keyframes notificar {
+    0%{
+        transform: translate(10000px);
+    }
+    25%{
+        transform: translate(0px);
+    }
+    75%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translate(10000px);
+    }
+}
+
+body{
+    background-color: #E6FFE6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+h1{
+    color: #008000;
+    position: absolute;
+    top: 0;
+}
+#card{
+    background-color: white;
+    border: 2px solid #008000;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px gray;
+    width: 80%;
+    max-width: 700px;
+    text-align: justify;
+}
+#nameUser{
+    color: #8BC02B;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 26pt;
+    width: 100%;
+    border: none;
+    font-family: Inter-bold;
+}
+.infos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #8BC02B;
+    padding-bottom: 10px;
+}
+img{
+    border: 2px solid #008000;
+    border-radius: 50%;
+}
+.informacoes{
+    text-align: justify;
+}
+.item{
+    padding: 5px 0px;
+}
+.label{
+    color: #008000;
+    font-family: Inter-bold;
+    padding: 5px 0px;
+}
+.info{
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+#bio{
+    border: none;
+    border-left: 2px solid #8BC02B;
+    border-bottom: 2px solid #8BC02B;
+    padding-bottom: 10px;
+    width: 100%;
+    color: black;
+    background-color: white;
+}
+.botoes{
+    text-align: center;
+}
+#disponibilizar, #alterar{
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    transition: 0.8s;
+    cursor: pointer;
+}
+#alterar{
+    display: none;
+}
+#disponibilizar:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px gray;
+    background-color: #008000cc;
+}
+input{
+    background-color: white;
+}
+#sucesso{
+    border: 2px solid green;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    width: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px #999999;
+    transform: translate(100000px);
+    animation: notificar 10s;
+}
+#sucesso i{
+    color: #008000;
+    font-size: 30px;
+    margin-right: 5px;
+}

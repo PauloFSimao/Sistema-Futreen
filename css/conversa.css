@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Inter-bold;
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
+}
+#headerConv{
+    background-color: #E6FFE6;
+    border-bottom: 2px solid #008000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #008000;
+    font-family: Inter-bold;
+    position: static;
+}
+#topo{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 80%;
+    color: #008000;
+    cursor: pointer;
+    width: max-content;
+}
+#imgPerfil{
+    width: 60px;
+    border-radius: 50%;
+    display: inline;
+    border: 2px solid #008000;
+    margin-right: 10px;
+}
+#mainConv{
+    padding: 12px;
+    display: block;
+    margin-bottom: 59.8px;
+    overflow-y: auto;
+    scrollbar-width: 300px ;
+}
+#mainConv::-webkit-scrollbar{
+    width: 10px;
+}
+#mainConv::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 20px;
+}
+#mainConv::-webkit-scrollbar-thumb{
+    background-color: #C3E9AE;
+    border-radius: 10px;
+    border: 1px solid #008000;
+}
+.divOutro{
+    display: flex;
+    justify-content: left;
+}
+.divEu{
+    display: flex;
+    justify-content: right;
+}
+#mensagemOutro{
+    background-color: #C3E9AE;
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 15px 10px 10px 0px;
+    width: max-content;
+    max-width: 650px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+#mensagemEu{
+    background-color: #A1D059;
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 10px 15px 0px 10px;
+    width: max-content;
+    max-width: 650px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    display: block;
+    
+}
+footer{
+    background-color: #E6FFE6;
+    position: absolute;
+    border-top: 2px solid #8BC02B;
+    border-left: 2px solid #008000;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    width: 55%;
+    box-sizing: border-box;
+}
+#form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.texto{
+    width: 50%;
+    border: 2px solid #008000;
+    border-radius: 20px;
+    padding: 5px;
+    display: inline;
+    margin: 0;
+}
+#enviar{
+    color: #008000;
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+

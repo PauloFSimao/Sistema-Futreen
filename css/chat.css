@@ -9,12 +9,12 @@
 
 @font-face {
     font-family: Inter;
-    src: url(fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 @font-face {
     font-family: Inter-bold;
-    src: url(fonts/Inter/static/Inter-Bold.ttf);
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
 }
 
 body{
@@ -87,7 +87,7 @@ header {
     color: var(--corTextos);
     font-weight: 200px;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-top: 18px;
 }
 
 .pesquisar {
@@ -97,7 +97,8 @@ header {
 input {
     border-radius: 20px;
     border: 1px solid var(--corDetalhes);
-    width: 400px;
+    width: 70%;
+    max-width: 400px;
     height: 25px;
     outline: none;
     padding: 10px;
@@ -122,4 +123,24 @@ input {
     font-family: Inter-bold;
     color: var(--corDetalhes);
 }
+#main{
+    padding: 0;
+    margin: 0;
+}
+#chat{
+    width: 100%;
+    display: float;
+    float: left;
+    z-index: 1;
+}
+#conversa{
+    width: calc(55% - 2px);
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #008000;
+    height: calc(100vh - 101.6px);
+    display: none;
+}
+
 

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/conversa.css">
+    <link rel="stylesheet" href="../css/info.css">
+    <link rel="icon" href="../img/Logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Chat - Futreen</title>
 </head>
 <body>
@@ -19,32 +23,50 @@
             <img id="perfil" src="../img/perfilsherck.jpg" alt="perfil">
         </div>
     </header>
-    <p id="buscar">Buscar Usuário</p>
-    <div class="pesquisar">
-        <input id="pesquisar" type="search" name="pesquisar" id="pesquisar">
-        <img id="lupa" src="../img/lupa.svg" alt="lupa">
-    </div>
-    <main>
-        <div class="conversa">
-            <img id="fotoUsuario" src="../img/perfil.png" alt="Foto Usuario">
-        <p id="usuario">Paulo</p>
+
+
+        <div id="chat">
+            <p id="buscar">Buscar Usuário</p>
+            <div class="pesquisar">
+                <input id="pesquisar" type="search" name="pesquisar" id="pesquisar">
+                <img id="lupa" src="../img/lupa.svg" alt="lupa">
+            </div>
+            <main id="main">
+                
+            </main>  
         </div>
-        <div class="conversa">
-            <img id="fotoUsuario" src="../img/perfil.png" alt="Foto Usuario">
-        <p id="usuario">Leticia</p>
+    
+        <div id="conversa">
+            <header id="headerCov">
+                <div id="topo">
+                    <img src="../img/memeperfil.jpg" id="imgPerfil">
+                    <span id="covName">@nomeUsuario</span>
+                </div>
+            </header>
+        
+            <main id="mainConv">
+                
+            </main>
+        
+            <footer>
+                <form onsubmit="mandarMensagem()" id="form">
+                    <input type="text" id="texto" class="texto" placeholder="Digite uma mensagem" required>
+                    <button id="enviar"><i class='bx bxs-send'></i></button>
+                </form>
+            </footer>
         </div>
-        <div class="conversa">
-            <img id="fotoUsuario" src="../img/perfil.png" alt="Foto Usuario">
-        <p id="usuario">Maria</p>
+
+        <div id="info">
+            <p id="fechaInfo"><b>X</b></p>
+            <img src="../img/perfil.png" id="imgInfo">
+            <h3 id="nomeInfo">@username</h3>
+            <h4>Bio</h4>
+            <p id="bioInfo">Neste artigo, foi apresentada a utilização do CSS para estilizar barras de rolagem e como garantir que esses estilos sejam reconhecidos na maioria dos navegadores modernos.</p>
+            <img src="../img/Logo.png" id="logoInfo">
         </div>
-        <div class="conversa">
-            <img id="fotoUsuario" src="../img/perfil.png" alt="Foto Usuario">
-        <p id="usuario">Laura</p>
-        </div>
-        <div class="conversa">
-            <img id="fotoUsuario" src="../img/perfil.png" alt="Foto Usuario">
-        <p id="usuario">Ana</p>
-        </div>
-    </main>    
+
+    
+    <script type="text/javascript" src="../js/chat.js"></script> 
+
 </body>
 </html>

@@ -11,8 +11,6 @@ async function listar() {
     campName.innerText = sessionStorage.getItem("username")
 
     const main = document.getElementById('main')
-    const nomeForum = document.getElementById('nomeForum')
-    const descForum = document.getElementById('descForum')
 
     const response = await fetch("http://localhost:8080/api/forum").then((resposta) => {
         resposta.json().then((forum) => {

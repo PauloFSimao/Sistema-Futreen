@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Meu perfil - Futreen</title>
+</head>
+<body>
+
+    <h1>Meu perfil Futreen</h1>
+
+    <div id="card">
+        
+        <input type="text" value="" id="nameUser" disabled>
+
+
+        <div class="infos">
+            <img src="../img/perfil.png">
+
+            <div class="informacoes">
+                <div class="item">
+                    <label for="nomeCom" class="label">Nome Completo: </label>
+                    <input type="text" name="nomeCom" id="nomeCom" class="info" disabled>
+                </div>
+
+                <div class="item">
+                    <label for="dataNasc" class="label">Data de nascimento: </label>
+                    <input type="date" name="dataNasc" id="dataNasc" class="info" disabled>
+                </div>
+
+                <div class="item">
+                    <label for="email" class="label">E-mail: </label>
+                    <input type="email" name="email" id="email" class="info" disabled>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="label">Bio:</p>
+        <textarea rows="3" id="bio" disabled></textarea>
+
+        <div class="botoes">
+            <button id="disponibilizar">Alterar</button>
+            <button id="alterar">Registrar</button>
+        </div>
+    </div>
+
+    <div id="sucesso">
+        <i class='bx bxs-check-circle'></i>
+        <span><b>Perfil atualizado com sucesso!</b></span>
+    </div>
+
+    <script src="../js/perfil.js" type="text/javascript"></script>
+    
+</body>
+</html>
