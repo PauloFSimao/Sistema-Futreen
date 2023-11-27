@@ -59,15 +59,22 @@ main{
     border-radius: 20px;
     padding: 5px 10px 10px 30px;
     border: 1px solid var(--corDetalhes);
+    display: flex;
+    flex-direction: column;
+    background-position: center;
 }
 
 .logo {
     display: block;
     text-align: center;
+    
 }
 
 #logo{
-    height: 150px;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #008000;
+    border-radius: 50%;
 }
 
 .inputs{
@@ -126,11 +133,6 @@ button:hover {
     display: block;
     text-align: center;
 }
-
-#logo{
-    height: 90px;
-}
-
 .inputs{
     display: block;
     text-align: center;
@@ -251,4 +253,7 @@ p {
     color: #008000;
     font-size: 30px;
     margin-right: 5px;
+}
+#imgPerfil{
+    display: block;
 }

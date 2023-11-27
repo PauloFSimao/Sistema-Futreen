@@ -32,8 +32,9 @@
     cursor: pointer;
     width: max-content;
 }
-#imgPerfilConv{
+#imgPerfil{
     width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: inline;
     border: 2px solid #008000;
@@ -61,12 +62,13 @@
 .divOutro{
     display: flex;
     justify-content: left;
+    flex-direction: column;
 }
 .divEu{
     display: flex;
     justify-content: right;
 }
-#mensagemOutro{
+.divMensagem{
     background-color: #C3E9AE;
     padding: 5px;
     padding-right: 10px;
@@ -122,6 +124,12 @@ footer{
     cursor: pointer;
     border: none;
 }
+.pAutor{
+    color: #008000;
+    font-size: 13px;
+    font-family: Inter-bold;
+}
+
 
 
 

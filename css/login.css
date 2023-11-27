@@ -9,12 +9,12 @@
 
 @font-face {
     font-family: Inter;
-    src: url(fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 @font-face {
     font-family: Inter-bold;
-    src: url(fonts/Inter/static/Inter-Bold.ttf);
+    src: url(/fonts/Inter/static/Inter-Bold.ttf);
 }
 
 body {
@@ -101,12 +101,12 @@ button:hover {
 
 .registrar {
     margin-bottom: 40px;
+    font-family: Inter-bold;
 }
 
 p {
     text-align: center;
     color: rgba(0, 0, 0, 0.50);
-    font-family: Inter;
     font-size: 12px;
 }
 

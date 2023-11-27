@@ -1,8 +1,16 @@
+if(sessionStorage.getItem('token') == null){
+    location.replace('http://127.0.0.1:5500/index.html')
+}
+
 const username = document.getElementById('nameUser')
 const nomeCom = document.getElementById('nomeCom')
 const dataNasc = document.getElementById('dataNasc')
 const email = document.getElementById('email')
 const bio = document.getElementById('bio')
+const senha = document.getElementById('senha')
+const divSenha = document.getElementById('divSenha')
+const myFoto = document.getElementById('myFoto')
+const imgPerfil = document.getElementById('imgPerfil')
 
 const btAlterar = document.getElementById('disponibilizar')
 
@@ -14,6 +22,20 @@ window.addEventListener('DOMContentLoaded', buscaDados())
 
 btAlterar.addEventListener('click', function () {
     disponibilizar()
+})
+
+imgPerfil.addEventListener('change', function() {
+    if(imgPerfil.files.length > 0){
+        const img = imgPerfil.files[0]
+        const leitor = new FileReader()
+
+        leitor.onload = async function(arqCarregado){
+            const imgCovertida = arqCarregado.target.result
+
+            document.getElementById('myFoto').src = imgCovertida
+        }   
+        leitor.readAsDataURL(img)
+    }
 })
 
 btAlterar.addEventListener('click', disponibilizar)
@@ -36,6 +58,10 @@ function disponibilizar() {
 
     bio.removeAttribute('disabled')
 
+    divSenha.style.display = 'block'
+
+    imgPerfil.style.display = 'block'
+
     btAlterar.style.display = 'none'
     alterar.style.display = 'inline'
 }
@@ -55,6 +81,10 @@ function desabilitar() {
 
     bio.setAttribute('disabled', true)
 
+    divSenha.style.display = 'none'
+
+    imgPerfil.style.display = 'none'
+
     btAlterar.style.display = 'inline'
     alterar.style.display = 'none'
 }
@@ -69,6 +99,7 @@ async function buscaDados() {
                 dataNasc.value = resposta.dataNasc
                 email.value = resposta.email
                 bio.innerText = resposta.bio
+                myFoto.src = resposta.foto
             })
         })
 }
@@ -81,7 +112,9 @@ async function alterarUser() {
         dataNasc: dataNasc.value,
         email: email.value,
         bio: bio.value,
-        userName: username.value
+        userName: username.value,
+        senha: senha.value,
+        foto: myFoto.src
     }
 
     const PUT = {
@@ -101,10 +134,11 @@ async function alterarUser() {
                     desabilitar()
 
                     sessionStorage.setItem('username', user.userName)
+                    sessionStorage.setItem('fotoPerfil', user.foto)
 
                     const sucesso = document.getElementById('sucesso')
+                    sucesso.style.animation = 'notificar 10s'
 
-                    
                 }
             })
         })

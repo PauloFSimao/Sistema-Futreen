@@ -18,7 +18,11 @@
 
 
         <div class="infos">
-            <img src="../img/perfil.png">
+            <div class="img">
+                <img src="../img/perfil.png" id="myFoto">
+                <input type="file" id="imgPerfil">
+
+            </div>
 
             <div class="informacoes">
                 <div class="item">
@@ -34,6 +38,11 @@
                 <div class="item">
                     <label for="email" class="label">E-mail: </label>
                     <input type="email" name="email" id="email" class="info" disabled>
+                </div>
+
+                <div class="item" id="divSenha">
+                    <label for="senha" class="label">Senha: </label>
+                    <input type="password" name="senha" class="info" id="senha">
                 </div>
 
             </div>

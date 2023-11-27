@@ -69,6 +69,8 @@ h1{
 img{
     border: 2px solid #008000;
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
 .informacoes{
     text-align: justify;
@@ -134,10 +136,18 @@ input{
     margin-top: 100px;
     box-shadow: 10px 10px 10px #999999;
     transform: translate(100000px);
-    animation: notificar 10s;
 }
 #sucesso i{
     color: #008000;
     font-size: 30px;
     margin-right: 5px;
+}
+#divSenha{
+    display: none;
+}
+#senha{
+    border-bottom: 2px solid #008000;
+}
+#imgPerfil{
+    display: none;
 }

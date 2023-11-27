@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="../css/meusForuns.css">
+    <link rel="stylesheet" href="../css/chatForum.css">
+    <link rel="stylesheet" href="../css/info.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Meus Fóruns</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img id="logo" src="../img/Logo.png" alt="logo"></a>
+        <div class="menu">
+            <a href="foruns.html">Fóruns</a>
+            <a href="chat.html">Chat</a>
+            <a id="atual" href="meusForuns.html">Meus Fóruns</a>
+        </div>
+        <a href="perfil.html" class="linkPerfil">
+            <p id="nomeUsuario">@nomedeusuario</p>
+            <div class="perfil">
+                <img id="perfil" src="../img/perfilsherck.jpg" alt="perfil">
+            </div>
+        </a>
+    </header>
+
+    <main id="mainForuns">
+        
+    </main>
+
+    <div id="conversaForum">
+        <header id="headerCov">
+            <div id="topo">
+                <img src="" id="imgPerfil">
+                <span id="forumName">@forumName</span>
+            </div>
+        </header>
+
+        <main id="mainConv">
+
+        </main>
+
+        <footer>
+            <form id="form" onsubmit="mandarPostagem()">
+                <input type="text" id="texto" class="texto" placeholder="Digite uma mensagem" required>
+                <button id="enviar"><i class='bx bxs-send'></i></button>
+            </form>
+        </footer>
+    </div>
+
+    <div id="info">
+        <p id="fechaInfo"><b>X</b></p>
+        <img src="../img/perfil.png" id="imgInfo">
+        <input type="file" id="inpForum">
+        <input type="text" id="nomeForumInfo" class="inputInfo" disabled>
+        <h4>Descrição</h4>
+        <textarea id="descInfo" rows="3" class="inputInfo" disabled></textarea> 
+        <p>Criado por: <span id="criadorInfo">@criador</span></p>
+        <div id="botoes">
+            <button id="btAlterar" class="btInfo">Alterar</button>
+            <button id="btRegistrar" class="btInfo">Registrar</button>
+        </div>
+    </div>
+
+    <div id="sucesso">
+        <i class='bx bxs-check-circle'></i>
+        <span><b>Fórum de discussão atualizado com sucesso!</b></span>
+    </div>
+
+    <script type="text/javascript" src="../js/chatForum.js"></script>
+
+</body>
+
+</html>

@@ -1,12 +1,14 @@
-@charset "UTF-8";
-
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
 :root {
     --corFundo: #E6FFE6;
     --corDetalhes: #008000;
     --corBranco: #FFFFFF;
     --corTextos: #8BC02B;
 }
-
 @font-face {
     font-family: Inter;
     src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
@@ -16,11 +18,25 @@
     font-family: Inter-bold;
     src: url(../fonts/Inter/static/Inter-Bold.ttf);
 }
+@keyframes notificar {
+    0%{
+        transform: translate(10000px);
+    }
+    25%{
+        transform: translate(0px);
+    }
+    75%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translate(10000px);
+    }
+}
 
 body{
     background-color: var(--corBranco);
     margin: 0px;
-    overflow-y: hidden;
+    max-height: 100vh;
 }
 
 header {
@@ -51,14 +67,6 @@ header {
 
 .menu > a::after {
     color: var(--corDetalhes);
-    text-decoration: dashed;
-}
-
-#atual {
-    color: var(--corDetalhes);
-    font-family: Inter-bold;
-    text-decoration: underline;
-
 }
 
 #nomeUsuario {
@@ -84,82 +92,47 @@ header {
     border: 2px solid #008000;
 }
 
-#buscar {
-    font-family: Inter;
-    text-align: center;
-    color: var(--corTextos);
-    font-weight: 200px;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+#atual {
+    color: var(--corDetalhes);
+    font-family: Inter-bold;
+    text-decoration: underline;
 
-.pesquisar {
-    text-align: center;
 }
-
-input {
-    border-radius: 20px;
-    border: 1px solid var(--corDetalhes);
-    width: 400px;
-    height: 25px;
-    outline: none;
-    padding: 10px;
-}
-
-#lupa {
-    position: absolute;
-    margin: 3px 0px 0px -25px;
-    height: 18px;
-    cursor: pointer;
-}
-
-main {
-    background-color: var(--corBranco);
-    max-height: calc(100vh - (101.6px + 170px));
+#mainForuns{
+    width: 100%;
+    display: block;
+    float: left;
+    flex-direction: column;
     overflow-y: auto;
-    scrollbar-width: 300px ;
-    position: relative;
+    scrollbar-width: 300px;
+    max-height: calc(100vh - 101.6px);
+    box-sizing: border-box;
+    
 }
-#main::-webkit-scrollbar{
+#mainForuns::-webkit-scrollbar{
     width: 10px;
 }
-#main::-webkit-scrollbar-track{
+#mainForuns::-webkit-scrollbar-track{
     box-shadow: inset 0 0 5px grey;
     border-radius: 20px;
 }
-#main::-webkit-scrollbar-thumb{
+#mainForuns::-webkit-scrollbar-thumb{
     background-color: #C3E9AE;
     border-radius: 10px;
     border: 1px solid #008000;
 }
-
 .forum {
     text-align: justify;
     font-size: 15px;
-    display: inline-block;
+    display: block;
     width: 100%;
-    max-width: 98.4%;
     min-width: 200px;
     border: 1px solid var(--corTextos);
     padding: 10px;
     margin-top: -1px;
+    position: relative;
+    box-sizing: border-box;
 }
-
-#assuntoForum {
-    font-family: Inter;
-    max-width: 92%;
-    min-width: 200px;
-    margin: 5px 0px 0px 90px;
-    height: 55.2px;
-}
-
-.forum > li {
-    margin-left: 90px;
-    list-style: none;
-    font-family: Inter-bold;
-    color: var(--corDetalhes);
-}
-
 #fotoForum {
     height: 80px;
     width: 80px;
@@ -167,16 +140,27 @@ main {
     border-radius: 50px;
     border: 2px solid #008000;
 }
-
-.participar {
+.forum > li {
+    margin-left: 90px;
+    list-style: none;
+    font-family: Inter-bold;
+    color: var(--corDetalhes);
+    
+}
+#assuntoForum {
+    font-family: Inter;
+    max-width: 92%;
+    min-width: 200px;
+    margin: 5px 0px 0px 90px;
+    height: 55.2px;
+}
+.sair {
     display: inline-block;
     width: 100%;
     text-align: right;
     margin-top: 10px;
-    height: 24px;
 }
-
-#criadoPor{
+#criadoPor {
     font-size: 10px;
     text-align: left;
     font-family: Inter;
@@ -184,45 +168,51 @@ main {
     margin-left: 2px;
     margin-top: 10px;
 }
-
-#participar {
+#sair {
     width: 120px;
     color: var(--corBranco);
-    background-color: var(--corDetalhes);
+    background-color: red;
     border-radius: 20px;
     border: none;
     font-family: Inter;
     padding: 4px;
     transition: 0.5s;
-}
-#participar:hover{
-    transform: scale(1.1);
     cursor: pointer;
-    box-shadow: 5px 5px 5px #999999;
-    background-color: #008000cc;
-}
-.topo{
-    text-align: center;
-    border-bottom: 2px solid #008000;
-    padding-bottom: 30px;
-    box-sizing: border-box;
-}
-.formForum{
-    text-decoration: none;
-    color: white;
-    background-color: #008000;
-    padding: 10px;
-    border-radius: 12px;
-    text-align: center;
-    margin-top: 20px;
-    display: inline-block;
-    font-family: Inter;
+    z-index: 100;
     transition: 1s;
 }
-.formForum:hover{
-    transform: scale(1.15);
-    box-shadow: 5px 5px 5px #999999;
-    background-color: #008000cc;
+#sair:hover{
+    background-color: #ff0000cc;
+    transform: scale(1.1);
+}
+#conversaForum{
+    width: calc(55% - 2px);
+    display: inline-block;
+    flex-direction: column;
+    border-left: 2px solid #008000;
+    height: calc(100vh - 101.6px);
+    display: none;
+}
+#sucesso{
+    border: 2px solid green;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    width: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px #999999;
+    transform: translate(100000px);
+}
+#sucesso i{
+    color: #008000;
+    font-size: 30px;
+    margin-right: 5px;
 }
 .linkPerfil{
     text-decoration: none;

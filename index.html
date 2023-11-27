@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/img/Logo.png">
     <title>Futreen</title>
 </head>
 <body>
@@ -13,19 +14,25 @@
         <div class="logo">
             <img id="logo" src="img/Logo.png" alt="logo">
         </div>
-        <div class="inputs">
-            <br>
-            <input id="email" type="email" name="Email" placeholder="Email">
-            <br>
-            <input id="senha" type="password" name="Senha" placeholder="Senha">
-            <br>
-        </div>
-        <div class="botao">
-            <button type="button"><a id="entrar" href="/telas/foruns.html">Entrar</a></button>
-        </div>
+
+        <form id="form" onsubmit="logar">
+            <div class="inputs">
+                <br>
+                <input id="email" type="email" name="Email" placeholder="Email" required>
+                <br>
+                <input id="senha" type="password" name="Senha" placeholder="Senha" required>
+                <br>
+            </div>
+            <div class="botao">
+                <button type="submit" id="entrar">Entrar</button>
+            </div>
+        </form>
+
         <div class="registrar">
             <p>Não tem uma conta? <a id="registre" href="telas/registrar.html">Registre-se</a></p>
         </div>
     </main>
+
+    <script type="text/javascript" src="/js/login.js"></script>
 </body>
 </html>
